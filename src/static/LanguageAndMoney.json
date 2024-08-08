@@ -1,0 +1,35 @@
+{
+    "language": [
+        {
+            "name": "English",
+            "code": "en",
+            "money":"USD-$"
+        },
+        {
+            "name": "简体中文",
+            "code": "zh",
+            "money":"CNY-￥",
+            "symbol": "￥"
+        },
+        {
+            "name": "Português",
+            "code": "pt",
+            "money":"EUR-€"
+        },
+        {
+            "name": "Español",
+            "code": "es",
+            "money":"EUR-€"
+        },
+        {
+            "name": "한국어",
+            "code": "ko",
+            "money":"KRW-₩"
+        },
+        {
+            "name": "日本語",
+            "code": "ja",
+            "money":"JPY-¥"
+        }
+    ]
+}
