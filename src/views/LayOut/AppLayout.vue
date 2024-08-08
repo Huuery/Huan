@@ -5,7 +5,7 @@ MoonStore.toggleMoon()
 </script>
 
 <template>
-    <div :class="MoonStore.isMoon ? 'moon' : ''" class="app-layout">
+    <div class="app-layout">
         退出页面了
         <el-link type="primary" href="/">1231</el-link>
     </div>
