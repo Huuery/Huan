@@ -33,7 +33,11 @@ MoonStore.toggleMoon()
                         <input type="text" placeholder="请输入密码">
                     </div>
                 </div>
-                <el-button color="#fcd535" :dark="isDark" class="login-btn">登录</el-button>
+                <div class="login-btn">
+                    <el-link href="/" :underline="false">
+                        <el-button color="#fcd535" :dark="isDark">登录</el-button>
+                    </el-link>
+                </div>
                 <div class="content-card-footer">
                     <div class="footer-item-left"></div>
                     <div class="footer-item-text">或</div>
@@ -116,6 +120,14 @@ MoonStore.toggleMoon()
     margin-top: 15px;
     border-radius: 8px;
 }
+
+.el-link--default,
+.el-link__inner,
+.el-button {
+    width: 100% !important;
+    height: 100% !important;
+}
+
 
 .content-card-footer {
     display: flex;
