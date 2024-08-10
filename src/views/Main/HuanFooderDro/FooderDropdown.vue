@@ -56,7 +56,7 @@ const handleVisibleChange = (visible) => {
     <div class="footer-dropdown-list">
         <div>
             <el-dropdown @command="handleLanguageChange" @visible-change="handleVisibleChange">
-                <span class="el-dropdown-link" :class="MoonStore.isMoon ? 'moon' : ''">
+                <span class="el-dropdown-link" :class="{ 'moon': MoonStore.isMoon }">
                     <component :is="iconInternational" :size="24" />
                     <span style="margin-left: 10px;">
                         {{ selectedLanguage }}
@@ -77,7 +77,7 @@ const handleVisibleChange = (visible) => {
         </div>
         <div>
             <el-dropdown @command="handleMoneyChange" @visible-change="handleVisibleChange">
-                <span class="el-dropdown-link" :class="MoonStore.isMoon ? 'moon' : ''">
+                <span class="el-dropdown-link" :class="{ 'moon': MoonStore.isMoon }">
                     <component :is="iconCurrency" :size="24" />
                     <span style="margin-left: 10px;">
                         {{ selectedMoney }}
@@ -96,7 +96,7 @@ const handleVisibleChange = (visible) => {
                 </template>
             </el-dropdown>
         </div>
-        <div :class="MoonStore.isMoon ? 'moon' : ''">
+        <div :class="{ 'moon': MoonStore.isMoon }">
             <component :is="iconMap" :size="24" />
             <span style="margin: 0 10px;">{{ selectedTheme }}</span>
             <el-switch v-model="value1" active-value="true" inactive-value="false" @change="getModeAndModeChange"

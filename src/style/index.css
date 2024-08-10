@@ -18,3 +18,11 @@ ul {
     background-color: #181a20 !important;
     color: var(--el-color-white) !important;
 }
+
+input{
+    outline: none;
+    border: 0px;
+    background: none;
+    margin-left: 10px;
+    color: aliceblue;
+}

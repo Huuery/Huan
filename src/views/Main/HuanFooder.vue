@@ -25,12 +25,12 @@ const MoonStore = useMoonStore()
 </script>
 
 <template>
-    <div class="fooder" :class="MoonStore.isMoon ? 'moon' : ''">
-        <div class="fooder-left" :class="MoonStore.isMoon ? 'moon' : ''">
+    <div class="fooder" :class="{ 'moon': MoonStore.isMoon }">
+        <div class="fooder-left" :class="{ 'moon': MoonStore.isMoon }">
             <span class="fooder-logo">
                 <h3>社区</h3>
                 <div>
-                    <el-link :class="MoonStore.isMoon ? 'moon' : ''" :underline="false" v-for="link in socialLinks"
+                    <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" v-for="link in socialLinks"
                         :key="link.key" href="javascript:;">
                         <i>
                             <component :is="link.component" :size="24" />
@@ -40,24 +40,24 @@ const MoonStore = useMoonStore()
                 </div>
             </span>
         </div>
-        <div class="fooder-center" :class="MoonStore.isMoon ? 'moon' : ''">
+        <div class="fooder-center" :class="{ 'moon': MoonStore.isMoon }">
             <div v-for=" item in fooder.acc.slice(0, 2)" :key="item">
                 <h3>{{ item.title }}</h3>
                 <ul>
                     <li v-for=" subItem in item.about" :key="subItem">
-                        <el-link :class="MoonStore.isMoon ? 'moon' : ''" :underline="false" href="javascript:;">{{
+                        <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" href="javascript:;">{{
                             subItem }}</el-link>
                     </li>
                 </ul>
             </div>
         </div>
-        <div class="fooder-right" :class="MoonStore.isMoon ? 'moon' : ''">
+        <div class="fooder-right" :class="{ 'moon': MoonStore.isMoon }">
             <div>
                 <div v-for=" item in fooder.acc.slice(2, 4)" :key="item">
                     <h3>{{ item.title }}</h3>
                     <ul>
                         <li v-for=" subItem in item.about" :key="subItem">
-                            <el-link :class="MoonStore.isMoon ? 'moon' : ''" :underline="false" href="javascript:;">{{
+                            <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" href="javascript:;">{{
                                 subItem
                                 }}</el-link>
                         </li>
@@ -69,7 +69,7 @@ const MoonStore = useMoonStore()
                     <h3>{{ item.title }}</h3>
                     <ul>
                         <li v-for=" subItem in item.about" :key="subItem">
-                            <el-link :class="MoonStore.isMoon ? 'moon' : ''" :underline="false" href="javascript:;">{{ subItem
+                            <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" href="javascript:;">{{ subItem
                                 }}</el-link>
                         </li>
                     </ul>
