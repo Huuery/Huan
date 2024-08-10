@@ -50,20 +50,28 @@ MoonStore.toggleMoon()
 </template>
 
 <style scoped>
-.app-layout {
+.app-layout,
+.title-input,
+.title-icon,
+.content-card,
+.title-loginfo,
+.title-loginfo-qc,
+.login-btn,
+.content-card-footer {
     display: flex;
+    align-items: center;
+}
+
+.app-layout {
     justify-content: center;
     align-content: space-around;
-    align-items: center;
 }
 
 .title {
     font-size: 16px;
 }
 
-.title>.title-input {
-    display: flex;
-    align-items: center;
+.title-input {
     justify-content: left;
     width: 100%;
     height: 38px;
@@ -73,8 +81,6 @@ MoonStore.toggleMoon()
 }
 
 .title-icon {
-    display: flex;
-    align-items: center;
     color: #f0b90b;
 }
 
@@ -82,11 +88,9 @@ MoonStore.toggleMoon()
     font-weight: bold;
 }
 
-.app-layout>.content-card {
+.content-card {
     width: 425px;
-    display: flex;
     justify-content: center;
-    align-items: center;
     align-content: center;
     flex-direction: column;
     border: 1px solid #2a3038;
@@ -94,13 +98,11 @@ MoonStore.toggleMoon()
     border-radius: 8px;
 }
 
-.app-layout>.content-card>.content-card-title {
+.content-card-title {
     width: 343px;
 }
 
-.app-layout>.content-card>.content-card-title>.title-loginfo {
-    display: flex;
-    align-items: center;
+.title-loginfo {
     justify-content: space-between;
 }
 
@@ -108,9 +110,7 @@ MoonStore.toggleMoon()
     background-color: #1e2329;
     width: 38px;
     height: 38px;
-    display: flex;
     justify-content: center;
-    align-items: center;
     border-radius: 8px;
 }
 
@@ -122,24 +122,20 @@ MoonStore.toggleMoon()
 }
 
 .el-link--default,
-.el-link__inner,
 .el-button {
     width: 100% !important;
     height: 100% !important;
 }
 
-
 .content-card-footer {
-    display: flex;
     justify-content: space-between;
     flex-direction: row;
-    align-items: center;
     margin-top: 10px;
     width: 100%;
 }
 
-.content-card-footer>.footer-item-left,
-.content-card-footer>.footer-item-right {
+.footer-item-left,
+.footer-item-right {
     background-color: #2a3038;
     width: 43%;
     height: 1px;
