@@ -9,6 +9,13 @@ ul {
     list-style: none;
 }
 
+body,
+head,
+html,#app {
+    width: 100%;
+    height: 100%;
+}
+
 .el-popper.is-pure.is-light ul {
     border-radius: 0 0 6px 6px;
     border: none;
@@ -27,7 +34,10 @@ input {
     color: aliceblue;
 }
 
-.el-link__inner {
+.el-link__inner,
+.el-button>span,
+.loginIcon {
     width: 100%;
     height: 100%;
+    justify-content: center
 }

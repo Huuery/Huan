@@ -59,7 +59,7 @@ const MoonStore = useMoonStore()
                         <li v-for=" subItem in item.about" :key="subItem">
                             <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" href="javascript:;">{{
                                 subItem
-                                }}</el-link>
+                            }}</el-link>
                         </li>
                     </ul>
                 </div>
@@ -69,7 +69,8 @@ const MoonStore = useMoonStore()
                     <h3>{{ item.title }}</h3>
                     <ul>
                         <li v-for=" subItem in item.about" :key="subItem">
-                            <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" href="javascript:;">{{ subItem
+                            <el-link :class="{ 'moon': MoonStore.isMoon }" :underline="false" href="javascript:;">{{
+                                subItem
                                 }}</el-link>
                         </li>
                     </ul>
@@ -132,6 +133,6 @@ h3 {
 }
 
 .el-link:hover {
-    color: #f0b90b!important;
+    color: #f0b90b !important;
 }
 </style>
