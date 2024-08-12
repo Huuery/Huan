@@ -124,14 +124,14 @@ const DataText = ref(SpotText)
         <Search />
       </el-icon>
     </el-menu-item>
-    <el-link href="Layout" :underline="false">
+    <el-link href="Login" :underline="false">
       <el-menu-item index="10">
         <el-button color="#2b3139" class="small" style="padding:0 12px; border-radius: 8px;">
           登录
         </el-button>
       </el-menu-item>
     </el-link>
-    <el-link :underline="false">
+    <el-link href="Register" :underline="false">
       <el-menu-item index="11">
         <el-button color="#fcd535" class="small" style="padding:0 12px; border-radius: 8px;">
           注册

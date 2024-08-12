@@ -27,19 +27,19 @@ MoonStore.toggleMoon()
                 </div>
                 <div class="title mail-phone">
                     <div>邮箱/手机号码</div>
-                    <div class="title-input mail-phone-input">
+                    <div class="title-input">
                         <input type="text" placeholder="请输入邮箱/手机号码">
                     </div>
                 </div>
                 <div class="title password">
                     <div>密码</div>
-                    <div class="title-input password-input">
+                    <div class="title-input">
                         <input type="password" placeholder="请输入密码">
                     </div>
                 </div>
                 <div class="login-btn">
                     <el-link href="/" :underline="false">
-                        <el-button color="#fcd535" :dark="isDark">登录</el-button>
+                        <el-button color="#fcd535">登录</el-button>
                     </el-link>
                 </div>
                 <div class="content-card-footer">
@@ -50,7 +50,7 @@ MoonStore.toggleMoon()
                     </div>
                     <div class="footer-google-login login-btn">
                         <el-link href="/" :underline="false" class="lcon-border">
-                            <el-button color="#00000000" :dark="isDark" class="">
+                            <el-button color="#00000000">
                                 <div class="google-icon loginIcon">
                                     <iconGoogle theme="filled" :size="16" fill="#ffffff" />
                                     <span>通过Google登录</span>
@@ -61,7 +61,7 @@ MoonStore.toggleMoon()
                     </div>
                     <div class="footer-apple-login login-btn">
                         <el-link href="/" :underline="false" class="lcon-border">
-                            <el-button color="#00000000" :dark="isDark" class="">
+                            <el-button color="#00000000">
                                 <div class="apple-icon loginIcon">
                                     <iconApple theme="filled" :size="18" fill="#ffffff" />
                                     <span>通过Apple登录</span>
@@ -73,45 +73,29 @@ MoonStore.toggleMoon()
                 </div>
             </div>
         </div>
+        <div class="footer">
+            <el-link type="warning" href="Register" :underline="false">
+                <span>创建币安账户</span>
+            </el-link>
+        </div>
     </div>
 
 </template>
 
 <style scoped>
-.app-layout,
-.title-input,
-.title-icon,
-.content-card,
-.title-loginfo,
-.title-loginfo-qc,
-.login-btn,
-.footer-item,
-.loginIcon {
-    display: flex;
-    align-items: center;
-}
-
-.lcon-border,
-.title-input,
-.content-card {
-    border: 1px solid #2a3038;
-    border-radius: 6px;
-}
-
 .loginIcon {
     justify-content: space-between
 }
 
 .app-layout {
     justify-content: center;
-    align-content: space-around;
     height: 100%;
+    flex-direction: column
 }
 
 .title {
     font-size: 16px;
 }
-
 
 .title-input {
     justify-content: left;
@@ -135,7 +119,8 @@ MoonStore.toggleMoon()
     flex-direction: column;
     border-radius: 12px;
     padding-top: 25px;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
+    margin-bottom: 28px;
 }
 
 .content-card-title {

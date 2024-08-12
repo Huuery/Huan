@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Layout from '@/views/LayOut/AppLayout.vue';
+import Login from '@/views/LayOut/AppLogin.vue';
 import HuanMain from '@/views/Main/HuanMain.vue';
-import { useMoonStore } from '@/stores/useMoonStore'; // 导入 Pinia store
+import Register from '@/views/LayOut/AppRegister.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -13,21 +13,17 @@ const router = createRouter({
       children: []
     },
     {
-      path: '/Layout',
-      name: 'LayoutAndLogin',
-      component: Layout
+      path: '/Login',
+      name: 'Login',
+      component: Login
+    },
+    {
+      path: '/Register',
+      name: 'Register',
+      component: Register
     }
+    
   ]
-});
-
-router.beforeEach((to, from, next) => {
-  const MoonStore = useMoonStore();
-  if (MoonStore.isMoon) {
-    document.body.classList.add('moon');
-  } else {
-    document.body.classList.remove('moon');
-  }
-  next();
 });
 
 export default router;

@@ -11,7 +11,9 @@ ul {
 
 body,
 head,
-html,#app {
+html,
+#app,
+.title-input>input {
     width: 100%;
     height: 100%;
 }
@@ -39,5 +41,34 @@ input {
 .loginIcon {
     width: 100%;
     height: 100%;
-    justify-content: center
+    justify-content: center;
+}
+
+:root {
+    --el-color-warning: #f0b90b !important;
+}
+
+.app-layout,
+.title-input,
+.title-icon,
+.content-card,
+.title-loginfo,
+.title-loginfo-qc,
+.login-btn,
+.footer-item,
+.loginIcon {
+    display: flex;
+    align-items: center;
+}
+
+
+.lcon-border,
+.title-input,
+.content-card {
+    border: 1px solid #2a3038;
+    border-radius: 6px;
+}
+
+.disNone {
+    display: none!important;
 }
