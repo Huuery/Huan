@@ -33,3 +33,8 @@ npm run build
 ```sh
 npm run lint
 ```
+
+### Push Github 
+git push origin main
+### Push Gitee
+git push gitee main

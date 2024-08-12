@@ -36,7 +36,7 @@ MoonStore.toggleMoon()
                     <div class="title-input">
                         <input type="text" placeholder="请输入邮箱/手机号码" @keyup="handleKeyup" v-model="useCheckMod.mobile">
                     </div>
-                    <p :class="useCheckMod.flag == false ? '' : 'disNone'" style="color: red;font-size: 12px;">
+                    <p :class="useCheckMod.flag == true ? '' : 'disNone'" style="color: red;font-size: 12px;">
                         <span>请输入正确的邮箱/手机号码</span>
                     </p>
                 </div>
