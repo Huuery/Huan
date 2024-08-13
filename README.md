@@ -35,6 +35,6 @@ npm run lint
 ```
 
 ### Push Github 
-git push origin main
+git push origin master
 ### Push Gitee
-git push gitee main
+git push gitee master

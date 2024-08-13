@@ -5,15 +5,25 @@ import {
     Apple as iconApple,
     Google as iconGoogle
 } from '@icon-park/vue-next';
-
+import { ref } from 'vue';
+const AppFlag = ref(false)
 const MoonStore = useMoonStore();
 const useCheckMod = useCheckModStore();
 function handleKeyup(event) {
     if (event.key === 'Enter') {
-        useCheckMod.checkMod();
-        console.log(12323);
+        FunArry();
     }
 }
+
+const AppFlagFunc = () => {
+    AppFlag.value = !useCheckMod.flag;
+}
+
+const FunArry = () => {
+    useCheckMod.checkMod();
+    AppFlagFunc();
+}
+
 MoonStore.toggleMoon()
 
 </script>
@@ -36,7 +46,7 @@ MoonStore.toggleMoon()
                     <div class="title-input">
                         <input type="text" placeholder="请输入邮箱/手机号码" @keyup="handleKeyup" v-model="useCheckMod.mobile">
                     </div>
-                    <p :class="useCheckMod.flag == true ? '' : 'disNone'" style="color: red;font-size: 12px;">
+                    <p :class="{ 'disNone': !AppFlag }" style="color: red;font-size: 12px;">
                         <span>请输入正确的邮箱/手机号码</span>
                     </p>
                 </div>
@@ -47,13 +57,11 @@ MoonStore.toggleMoon()
                     </div>
                 </div>
                 <div class="login-btn">
-                    <el-link href="javascript:;" @click="useCheckMod.checkMod" :underline="false"
-                        :class="{ 'disNone': useCheckMod.flag }">
-                        <el-button color="#fcd535">下一步</el-button>
+                    <el-link href="#" :underline="false" :class="{ 'disNone': useCheckMod.flag }">
+                        <el-button color="#fcd535" @click="FunArry">下一步</el-button>
                     </el-link>
-                    <el-link href="/" @click="useCheckMod.checkMod" :underline="false"
-                        :class="{ 'disNone': !useCheckMod.flag }">
-                        <el-button color="#fcd535">注册</el-button>
+                    <el-link href="/" :underline="false" :class="{ 'disNone': !useCheckMod.flag }">
+                        <el-button @click="useCheckMod.checkMod" color="#fcd535">注册</el-button>
                     </el-link>
                 </div>
                 <div class="content-card-footer">
