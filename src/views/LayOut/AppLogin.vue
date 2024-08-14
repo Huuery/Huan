@@ -1,11 +1,21 @@
 <script setup>
 import { useMoonStore } from '@/stores/useMoonStore';
+import { useCheckModStore } from "@/stores/checkMod";
 import {
     TwoDimensionalCodeOne as iconTwoDimensionalCodeOne,
     Apple as iconApple,
     Google as iconGoogle
 } from '@icon-park/vue-next';
+import { ref } from 'vue';
 const MoonStore = useMoonStore();
+const useCheckMod = useCheckModStore();
+const AppFlag = ref(false);
+const AppFlagFunc = () => {
+    setTimeout(() => (
+        useCheckMod.checkMod(),
+        AppFlag.value = !useCheckMod.flag
+    ), 1000)
+}
 MoonStore.toggleMoon()
 </script>
 
@@ -28,8 +38,11 @@ MoonStore.toggleMoon()
                 <div class="title mail-phone">
                     <div>邮箱/手机号码</div>
                     <div class="title-input">
-                        <input type="text" placeholder="请输入邮箱/手机号码">
+                        <input type="text" placeholder="请输入邮箱/手机号码" @blur="AppFlagFunc" v-model="useCheckMod.mobile">
                     </div>
+                    <p :class="{ 'disNone': !AppFlag }" style="color: red;font-size: 12px;">
+                        <span>请输入正确的邮箱/手机号码</span>
+                    </p>
                 </div>
                 <div class="title password">
                     <div>密码</div>

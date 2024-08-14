@@ -1,6 +1,6 @@
 <script setup>
 import { useMoonStore } from '@/stores/useMoonStore';
-import { useCheckModStore } from "@/stores/checkMod"
+import { useCheckModStore } from "@/stores/checkMod";
 import {
     Apple as iconApple,
     Google as iconGoogle
@@ -20,8 +20,9 @@ const AppFlagFunc = () => {
 }
 
 const FunArry = () => {
-    useCheckMod.checkMod();
-    AppFlagFunc();
+    setTimeout(() => (
+        useCheckMod.checkMod(),
+        AppFlagFunc()), 1000)
 }
 
 MoonStore.toggleMoon()
@@ -44,7 +45,8 @@ MoonStore.toggleMoon()
                 <div class="title mail-phone">
                     <div>邮箱/手机号码</div>
                     <div class="title-input">
-                        <input type="text" placeholder="请输入邮箱/手机号码" @keyup="handleKeyup" v-model="useCheckMod.mobile">
+                        <input type="text" placeholder="请输入邮箱/手机号码" @keyup="handleKeyup" v-model="useCheckMod.mobile"
+                            @blur="FunArry">
                     </div>
                     <p :class="{ 'disNone': !AppFlag }" style="color: red;font-size: 12px;">
                         <span>请输入正确的邮箱/手机号码</span>
@@ -61,7 +63,7 @@ MoonStore.toggleMoon()
                         <el-button color="#fcd535" @click="FunArry">下一步</el-button>
                     </el-link>
                     <el-link href="/" :underline="false" :class="{ 'disNone': !useCheckMod.flag }">
-                        <el-button @click="useCheckMod.checkMod" color="#fcd535">注册</el-button>
+                        <el-button color="#fcd535">注册</el-button>
                     </el-link>
                 </div>
                 <div class="content-card-footer">
