@@ -6,6 +6,7 @@ import HuanNav from '@/views/Main/HuanNav.vue';
 <template>
     <div class="common-layout">
         <el-container>
+            <div style="height: 60px;background-color: aqua;"></div>
             <el-header>
                 <HuanHeader />
             </el-header>
@@ -35,9 +36,5 @@ import HuanNav from '@/views/Main/HuanNav.vue';
 
 .el-menu--horizontal.el-menu {
     border: none;
-}
-
-.el-main {
-    margin-top: 60px;
 }
 </style>

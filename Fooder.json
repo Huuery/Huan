@@ -1,0 +1,158 @@
+{
+  "uuid": "8772e21a-666b-4db7-8edd-13cdfe93ee85",
+  "lastMigration": 32,
+  "name": "Fooder",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 3000,
+  "hostname": "",
+  "folders": [],
+  "routes": [
+    {
+      "uuid": "92c98a82-26e4-4f20-ba35-5f34713c5814",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/Fooder/fooder-data",
+      "responses": [
+        {
+          "uuid": "15131fa2-b91c-4c25-abab-a6ec893a38de",
+          "body": "{\r\n    \"acc\": [\r\n        {\r\n            \"title\": \"关于我们\",\r\n            \"about\": [\r\n                \"关于我们\",\r\n                \"职业机会\",\r\n                \"公告中心\",\r\n                \"新闻\",\r\n                \"新闻中心\",\r\n                \"法律\",\r\n                \"服务协议\",\r\n                \"隐私说明\",\r\n                \"建立信任\",\r\n                \"博客\",\r\n                \"社区\",\r\n                \"网站地图\",\r\n                \"风险提示\",\r\n                \"下载\",\r\n                \"桌面客户端\"\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"产品\",\r\n            \"about\": [\r\n                \"交易所\",\r\n                \"一键买币\",\r\n                \"支付\",\r\n                \"学院\",\r\n                \"直播\",\r\n                \"TAX\",\r\n                \"礼品卡\",\r\n                \"Launchpool\",\r\n                \"定投计划\",\r\n                \"ETH质押\",\r\n                \"NFT\",\r\n                \"BABT\",\r\n                \"研究院\",\r\n                \"慈善\"\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"商业\",\r\n            \"about\": [\r\n                \"申请CNY认证广告方\",\r\n                \"P2Pro广告方App\",\r\n                \"上币申请\",\r\n                \"机构和VIP服务\",\r\n                \"Labs\"\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"学习\",\r\n            \"about\": [\r\n                \"学习赚币\",\r\n                \"浏览加密货币价格\",\r\n                \"比特币价格\",\r\n                \"以太币价格\",\r\n                \"浏览加密货币价格预测\",\r\n                \"比特币价格预测\",\r\n                \"以太坊价格预测\",\r\n                \"购买比特币\",\r\n                \"买 BNB\",\r\n                \"买 Ripple\",\r\n                \"买 Dogecoin\",\r\n                \"买 Ethereum\",\r\n                \"更多热门币种\"\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"服务\",\r\n            \"about\": [\r\n                \"邀请奖励\",\r\n                \"场外大宗交易\",\r\n                \"历史行情数据\",\r\n                \"储备金证明\"\r\n            ]\r\n        },\r\n        {\r\n            \"title\": \"帮助\",\r\n            \"about\": [\r\n                \"全天候聊天支持\",\r\n                \"帮助中心\",\r\n                \"产品反馈与建议\",\r\n                \"费率标准\",\r\n                \"APIs\",\r\n                \"官方验证渠道\",\r\n                \"交易规则\",\r\n                \"币安空投门户\",\r\n                \"执法协助申请\"\r\n            ]\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "549ed230-0554-4688-be73-739511b8dfda",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/Header/header-data",
+      "responses": [
+        {
+          "uuid": "a01c2ab2-a11b-446b-9bf1-cb287e27914a",
+          "body": "{\r\n    \"Spot\": [\r\n        {\r\n            \"spot\": \"现货交易\",\r\n            \"messgae\": \"使用先进工具，在现货市场交易加密货币\",\r\n            \"index\": \"4-1\",\r\n            \"ICO\": \"TrendCharts\"\r\n        },\r\n        {\r\n            \"spot\": \"杠杆交易\",\r\n            \"messgae\": \"借币交易，获得超额收益\",\r\n            \"index\": \"4-2\",\r\n            \"ICO\": \"List\"\r\n        },\r\n        {\r\n            \"spot\": \"C2C\",\r\n            \"messgae\": \"快速买卖币，支持银行转账等800多种选择\",\r\n            \"index\": \"4-3\",\r\n            \"ICO\": \"User\"\r\n        },\r\n        {\r\n            \"spot\": \"闪兑与大宗交易\",\r\n            \"messgae\": \"大小额交易轻松完成\",\r\n            \"index\": \"4-4\",\r\n            \"ICO\": \"HelpFilled\"\r\n        },\r\n        {\r\n            \"spot\": \"交易机器人\",\r\n            \"messgae\": \"我们提供多种自动化策略，助力您简单，快速，可靠地开展智能交易\",\r\n            \"index\": \"4-5\",\r\n            \"ICO\": \"UserFilled\"\r\n        },\r\n        {\r\n            \"spot\": \"跟单交易\",\r\n            \"messgae\": \"一键跟单交易达人\",\r\n            \"index\": \"4-6\",\r\n            \"ICO\": \"Finished\"\r\n        },\r\n        {\r\n            \"spot\": \"API\",\r\n            \"messgae\": \"一组API Key，打开无限机会之门\",\r\n            \"index\": \"4-7\",\r\n            \"ICO\": \"Key\"\r\n        },\r\n        {\r\n            \"spot\": \"U本位合约\",\r\n            \"messgae\": \"多种以USDT和USDC结算的合约\",\r\n            \"index\": \"5-1\",\r\n            \"ICO\": \"Ticket\"\r\n        },\r\n        {\r\n            \"spot\": \"币本位合约\",\r\n            \"messgae\": \"以加密货币结算的合约\",\r\n            \"index\": \"5-2\",\r\n            \"ICO\": \"Coin\"\r\n        },\r\n        {\r\n            \"spot\": \"期权\",\r\n            \"messgae\": \"以可控的风险轻松进场USDT期权交易\",\r\n            \"index\": \"5-3\",\r\n            \"ICO\": \"Failed\"\r\n        },\r\n        {\r\n            \"spot\": \"广场\",\r\n            \"messgae\": \"及时了解加密货币的最新资讯\",\r\n            \"index\": \"7-1\",\r\n            \"ICO\": \"OfficeBuilding\"\r\n        },\r\n        {\r\n            \"spot\": \"学院（边学边赚）\",\r\n            \"messgae\": \"通过学习区块链知识，免费赚取加密货币\",\r\n            \"index\": \"7-2\",\r\n            \"ICO\": \"School\"\r\n        },\r\n        {\r\n            \"spot\": \"博客\",\r\n            \"messgae\": \"拓展您的知识储备，获取最新见解\",\r\n            \"index\": \"7-3\",\r\n            \"ICO\": \"Paperclip\"\r\n        },\r\n        {\r\n            \"spot\": \"研究院\",\r\n            \"messgae\": \"机构级的分析，深度的洞悉和更多\",\r\n            \"index\": \"7-4\",\r\n            \"ICO\": \"Reading\"\r\n        },\r\n        {\r\n            \"spot\": \"VIP和机构\",\r\n            \"messgae\": \"值得VIP与机构信赖的数字资产平台\",\r\n            \"index\": \"8-1\",\r\n            \"ICO\": \"Guide\"\r\n        },\r\n        {\r\n            \"spot\": \"Launchpool\",\r\n            \"messgae\": \"第一时间发现新代笔发行\",\r\n            \"index\": \"8-2\",\r\n            \"ICO\": \"Lollipop\"\r\n        },\r\n        {\r\n            \"spot\": \"Megadrop\",\r\n            \"messgae\": \"锁定BNB并完成Web3任务，赚取更多空投奖励\",\r\n            \"index\": \"8-3\",\r\n            \"ICO\": \"Document\"\r\n        },\r\n        {\r\n            \"spot\": \"矿池\",\r\n            \"messgae\": \"服务矿工群体，提高挖矿收益\",\r\n            \"index\": \"8-4\",\r\n            \"ICO\": \"Place\"\r\n        },\r\n        {\r\n            \"spot\": \"支付\",\r\n            \"messgae\": \"质押借币\",\r\n            \"index\": \"8-5\",\r\n            \"ICO\": \"WalletFilled\"\r\n        },\r\n        {\r\n            \"spot\": \"质押借币\",\r\n            \"messgae\": \"借贷数字货币，即可到账\",\r\n            \"index\": \"8-6\",\r\n            \"ICO\": \"GoodsFilled\"\r\n        },\r\n        {\r\n            \"spot\": \"NFT\",\r\n            \"messgae\": \"探索来自全球作者的NFT\",\r\n            \"index\": \"8-7\",\r\n            \"ICO\": \"Flag\"\r\n        },\r\n        {\r\n            \"spot\": \"粉丝代笔\",\r\n            \"messgae\": \"探索全新粉丝空间，解锁无限粉丝权益\",\r\n            \"index\": \"8-8\",\r\n            \"ICO\": \"Eleme\"\r\n        },\r\n        {\r\n            \"spot\": \"Web3钱包\",\r\n            \"messgae\": \"新一代Web3钱包\",\r\n            \"index\": \"8-9\",\r\n            \"ICO\": \"Wallet\"\r\n        },\r\n        {\r\n            \"spot\": \"BNB Chain\",\r\n            \"messgae\": \"最受欢迎的区块链，支持构建您自己的DApp\",\r\n            \"index\": \"8-10\",\r\n            \"ICO\": \"MessageBox\"\r\n        },\r\n        {\r\n            \"spot\": \"慈善\",\r\n            \"messgae\": \"区块链助理慈善更加透明、高效、可追朔\",\r\n            \"index\": \"8-11\",\r\n            \"ICO\": \"Sunrise\"\r\n        },\r\n        {\r\n            \"spot\": \"研究院\",\r\n            \"messgae\": \"机构级的分析，深度的洞悉和更多\",\r\n            \"index\": \"7-4\",\r\n            \"ICO\": \"Shop\"\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    },
+    {
+      "uuid": "6cf34d04-02d2-44a6-a165-dd9a4c02f122",
+      "type": "http",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "api/Nav/NewAndHot",
+      "responses": [
+        {
+          "uuid": "07f9878f-92e5-4c4a-92da-0a2a2c2e0dde",
+          "body": "{\r\n    \"Tokens\": [\r\n        {\r\n            \"name\": \"BTC\",\r\n            \"nameRow\": \"Bitcoin\",\r\n            \"img\": \"/icons/BTC.png\",\r\n            \"price\": \"62,321.78\",\r\n            \"priceChange\": \"0.00\"\r\n        },\r\n        {\r\n            \"name\": \"ETH\",\r\n            \"nameRow\": \"Ethereum\",\r\n            \"img\": \"/icons/ETH.png\",\r\n            \"price\": \"3,423.23\",\r\n            \"priceChange\": \"0.00\"\r\n        },\r\n        {\r\n            \"name\": \"BNB\",\r\n            \"nameRow\": \"BNB\",\r\n            \"img\": \"/icons/BNB.png\",\r\n            \"price\": \"625.45\",\r\n            \"priceChange\": \"0.00\"\r\n        },\r\n        {\r\n            \"name\": \"XRP\",\r\n            \"nameRow\": \"Ripple\",\r\n            \"img\": \"/icons/XRP.png\",\r\n            \"price\": \"0.5523\",\r\n            \"priceChange\": \"0.00\"\r\n        }\r\n    ]\r\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "bodyType": "INLINE",
+          "filePath": "",
+          "databucketID": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false,
+          "default": true,
+          "crudKey": "id",
+          "callbacks": []
+        }
+      ],
+      "responseMode": null
+    }
+  ],
+  "rootChildren": [
+    {
+      "type": "route",
+      "uuid": "92c98a82-26e4-4f20-ba35-5f34713c5814"
+    },
+    {
+      "type": "route",
+      "uuid": "549ed230-0554-4688-be73-739511b8dfda"
+    },
+    {
+      "type": "route",
+      "uuid": "6cf34d04-02d2-44a6-a165-dd9a4c02f122"
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    },
+    {
+      "key": "Access-Control-Allow-Origin",
+      "value": "*"
+    },
+    {
+      "key": "Access-Control-Allow-Methods",
+      "value": "GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS"
+    },
+    {
+      "key": "Access-Control-Allow-Headers",
+      "value": "Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "data": [],
+  "callbacks": []
+}

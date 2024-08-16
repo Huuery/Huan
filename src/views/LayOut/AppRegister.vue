@@ -110,15 +110,17 @@ MoonStore.toggleMoon()
 
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .loginIcon {
-    justify-content: space-between
+
+    justify-content: space-between;
 }
 
 .app-layout {
+
     justify-content: center;
     height: 100%;
-    flex-direction: column
+    flex-direction: column;
 }
 
 .title {
@@ -126,6 +128,7 @@ MoonStore.toggleMoon()
 }
 
 .title-input {
+
     justify-content: left;
     width: 100%;
     height: 38px;
@@ -134,14 +137,15 @@ MoonStore.toggleMoon()
 
 .title-icon {
     color: #f0b90b;
-}
 
-.title-icon>span {
-    font-weight: bold;
+    >span {
+        font-weight: bold;
+    }
 }
 
 .content-card {
     width: 425px;
+
     justify-content: center;
     align-content: center;
     flex-direction: column;
@@ -156,6 +160,7 @@ MoonStore.toggleMoon()
 }
 
 .title-loginfo {
+
     justify-content: space-between;
 }
 
@@ -163,6 +168,7 @@ MoonStore.toggleMoon()
     background-color: #1e2329;
     width: 38px;
     height: 38px;
+
     justify-content: center;
     border-radius: 6px;
 }
@@ -172,26 +178,29 @@ MoonStore.toggleMoon()
     height: 40px;
     margin-top: 15px;
     border-radius: 8px;
+
+    .el-link--default,
+    .el-button,
+    .el-button>span {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
 
-.el-link--default,
-.el-button,
-.el-button>span {
-    width: 100% !important;
-    height: 100% !important;
-}
+.content-card-footer {
+    .footer-item {
 
-.content-card-footer>.footer-item {
-    justify-content: space-between;
-    flex-direction: row;
-    margin-top: 10px;
-    width: 100%;
-}
+        justify-content: space-between;
+        flex-direction: row;
+        margin-top: 10px;
+        width: 100%;
 
-.footer-item-left,
-.footer-item-right {
-    background-color: #2a3038;
-    width: 43%;
-    height: 1px;
+        .footer-item-left,
+        .footer-item-right {
+            background-color: #2a3038;
+            width: 43%;
+            height: 1px;
+        }
+    }
 }
 </style>

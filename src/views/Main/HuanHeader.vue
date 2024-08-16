@@ -1,23 +1,28 @@
 <script setup>
+// import SpotText from "../../static/Header.json"
+// const header = ref(SpotText)
+
 import { ref } from 'vue'
-import SpotText from "../../static/Header.json"
 import { useMoonStore } from '@/stores/useMoonStore';
+import { useHeaderData } from '@/apis/userHeader'
+
+const { header } = useHeaderData()
 const activeIndex = ref('1')
 const moonStore = useMoonStore()
 const handleSelect = (key, keyPath) => {
   console.log(key, keyPath)
 }
-const DataText = ref(SpotText)
 </script>
+
 <template>
   <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" :ellipsis="false" @select="handleSelect"
     :background-color="moonStore.isMoon ? '#181a20' : '#fff'" :text-color="moonStore.isMoon ? '#fff' : '#181a20'"
     active-text-color="#f0b90b">
     <el-menu-item index="1" style="margin: 0 10px;">
-      <el-icon :size="100" style="color:skyblue">
+      <el-icon :size="100" style="color:#fcd535">
         <ElementPlus />
       </el-icon>
-      Huance
+      <span style="font-weight: 1000; ;">HUANCE</span>
     </el-menu-item>
     <el-menu-item index="2">一键买币</el-menu-item>
     <el-menu-item index="3">行情</el-menu-item>
@@ -27,7 +32,7 @@ const DataText = ref(SpotText)
         <el-menu-item disabled class="item">
           <span>基础版</span>
         </el-menu-item>
-        <template v-for="text in DataText.Spot.slice(0, 4)" :key="text.index">
+        <template v-for="text in header?.Spot.slice(0, 4)" :key="text.index">
           <el-menu-item :index="text.index" class="enlarged-item">
             <el-icon :size="28" style="color:#619cff">
               <component :is="text.ICO" />
@@ -43,7 +48,7 @@ const DataText = ref(SpotText)
         <el-menu-item disabled class="item">
           <span>专业版</span>
         </el-menu-item>
-        <template v-for="text in DataText.Spot.slice(4, 7)" :key="text.index">
+        <template v-for="text in header?.Spot.slice(4, 7)" :key="text.index">
           <el-menu-item :index="text.index" class="enlarged-item">
             <el-icon :size="28" style="color:#619cff">
               <component :is="text.ICO" />
@@ -59,7 +64,7 @@ const DataText = ref(SpotText)
     <el-sub-menu index="5">
       <template #title>合约</template>
       <div>
-        <template v-for="text in DataText.Spot.slice(7, 10)" :key="text.index">
+        <template v-for="text in header?.Spot.slice(7, 10)" :key="text.index">
           <el-menu-item :index="text.index" class="enlarged-item">
             <el-icon :size="28" style="color:#619cff">
               <component :is="text.ICO" />
@@ -76,7 +81,7 @@ const DataText = ref(SpotText)
     <el-sub-menu index="7">
       <template #title>广场</template>
       <div>
-        <template v-for="text in DataText.Spot.slice(10, 14)" :key="text.index">
+        <template v-for="text in header?.Spot.slice(10, 14)" :key="text.index">
           <el-menu-item :index="text.index" class="enlarged-item">
             <el-icon :size="28" style="color:#619cff">
               <component :is="text.ICO" />
@@ -92,7 +97,7 @@ const DataText = ref(SpotText)
     <el-sub-menu index="8">
       <template #title>更多</template>
       <div class="item-left">
-        <template v-for="text in DataText.Spot.slice(14, 21)" :key="text.index">
+        <template v-for="text in header?.Spot.slice(14, 21)" :key="text.index">
           <el-menu-item :index="text.index" class="enlarged-item">
             <el-icon :size="28" style="color:#619cff">
               <component :is="text.ICO" />
@@ -105,7 +110,7 @@ const DataText = ref(SpotText)
         </template>
       </div>
       <div class="item-right">
-        <template v-for="text in DataText.Spot.slice(21, 27)" :key="text.index">
+        <template v-for="text in header?.Spot.slice(21, 27)" :key="text.index">
           <el-menu-item :index="text.index" class="enlarged-item">
             <el-icon :size="28" style="color:#619cff">
               <component :is="text.ICO" />

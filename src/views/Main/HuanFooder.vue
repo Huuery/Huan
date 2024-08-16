@@ -1,5 +1,5 @@
 <script setup>
-import fooder from "@/static/Fooder.json"
+import { userFooderData } from '@/apis/userFooder'
 import Dro from "./HuanFooderDro/FooderDropdown.vue"
 import { useMoonStore } from '@/stores/useMoonStore';
 import {
@@ -22,10 +22,11 @@ const socialLinks = [
     { component: iconMoreApp, key: 'More' }
 ]
 const MoonStore = useMoonStore()
+const { fooder } = userFooderData()
 </script>
 
 <template>
-    <div class="fooder" :class="{ 'moon': MoonStore.isMoon }">
+    <div class="fooder" v-if="fooder" :class="{ 'moon': MoonStore.isMoon }">
         <div class="fooder-left" :class="{ 'moon': MoonStore.isMoon }">
             <span class="fooder-logo">
                 <h3>社区</h3>
@@ -80,9 +81,8 @@ const MoonStore = useMoonStore()
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
 .fooder {
-    display: flex;
     justify-content: center;
     align-items: flex-start;
     margin: 0;
@@ -102,18 +102,21 @@ const MoonStore = useMoonStore()
 .fooder-right,
 .fooder-center,
 .fooder-left {
-    display: flex;
+    align-items: normal;
     flex-wrap: wrap;
     gap: 20px;
+    margin: 25px;
 }
 
-.fooder-logo>div>.el-link {
-    min-width: 50px;
-    margin: 5px;
-}
+.fooder-logo {
+    >div>.el-link {
+        min-width: 50px;
+        margin: 5px;
+    }
 
-.fooder-logo>h3 {
-    margin-left: 16px;
+    >h3 {
+        margin-left: 16px;
+    }
 }
 
 .fooder-right>div,
@@ -130,9 +133,8 @@ h3 {
 .el-link {
     font-size: 14px;
 
-}
-
-.el-link:hover {
-    color: #f0b90b !important;
+    &:hover {
+        color: #f0b90b !important;
+    }
 }
 </style>

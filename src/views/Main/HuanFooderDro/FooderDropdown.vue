@@ -1,7 +1,8 @@
 <script setup>
+import FooterDropDownList from '@/static/LanguageAndMoney.json';
+
 import { ElMessage } from 'element-plus'
 import { ArrowDown } from '@element-plus/icons-vue'
-import FooterDropDownList from '@/static/LanguageAndMoney.json';
 import { ref, markRaw } from 'vue';
 import { useMoonStore } from '@/stores/useMoonStore';
 import {
@@ -116,33 +117,33 @@ const handleVisibleChange = (visible) => {
     </div>
 </template>
 
-<style scoped>
-.el-dropdown-link {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    color: #151618;
-}
-
-.el-dropdown-menu {
-    width: 240px;
-}
-
+<style scoped lang="scss">
 .footer-dropdown-list {
     padding: 16px;
     height: 160px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
+
+    >div {
+        display: flex;
+        align-items: center;
+        font-size: 13px;
+
+        .el-dropdown-link {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            color: #151618;
+
+            &.moon {
+                color: var(--el-color-white);
+            }
+        }
+    }
 }
 
-.footer-dropdown-list>div {
-    display: flex;
-    align-items: center;
-    font-size: 13px;
-}
-
-.moon {
-    color: var(--el-color-white);
+.el-dropdown-menu {
+    width: 240px;
 }
 </style>
