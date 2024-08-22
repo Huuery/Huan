@@ -8,7 +8,10 @@ import News from "@/static/New.json";
 const activeIndex = ref('1')
 const handleSelect = (key, keyPath) => {
     console.log(key, keyPath)
+    activeIndex.value = key
+    return activeIndex
 }
+
 const New = News;
 const moonStore = useMoonStore();
 const { NavAndHot } = userNavAndHotData();
@@ -23,10 +26,10 @@ const value1 = ref(futureDate);
             :text-color="moonStore.isMoon ? '#f5f5f5' : '#000'">
             <el-menu :default-active="activeIndex" mode="horizontal" :ellipsis="false" @select="handleSelect"
                 :text-color="moonStore.isMoon ? '#f5f5f5' : '#000'">
-                <el-menu-item index="1">
+                <el-menu-item index="1" class="hot">
                     热门
                 </el-menu-item>
-                <el-menu-item index="2">
+                <el-menu-item index="2" class="new">
                     新币
                 </el-menu-item>
             </el-menu>
@@ -36,9 +39,26 @@ const value1 = ref(futureDate);
         </el-menu>
         <!-- 确保 NavAndHot 不为空后再渲染列表 -->
         <div>
-            <div v-if="NavAndHot" :class="{ 'moon': moonStore.isMoon }">
-                <div>
+            <div class="Tokens-header" v-if="NavAndHot" :class="{ 'moon': moonStore.isMoon }">
+                <div class="Tokens-hot" :class="activeIndex == '2' ? 'none' : ''">
                     <div v-for="(item, index) in NavAndHot.Tokens.slice(0, 4)" :key="index">
+                        <div>
+                            <span><img :src="item.img" alt=""></span>
+                            <div>
+                                <span>{{ item.name }}</span>
+                                <span>{{ item.nameRow }}</span>
+                            </div>
+                        </div>
+                        <div>
+                            <span>${{ item.price }}</span>
+                        </div>
+                        <div>
+                            <span>{{ item.priceChange }}%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="Tokens-new" :class="activeIndex == '1' ? 'none' : ''">
+                    <div v-for="(item, index) in NavAndHot.Tokens.slice(4, 8)" :key="index">
                         <div>
                             <span><img :src="item.img" alt=""></span>
                             <div>
@@ -95,10 +115,13 @@ const value1 = ref(futureDate);
             </div>
         </div>
     </div>
-
 </template>
 
 <style scoped lang="scss">
+.none {
+    display: none !important;
+}
+
 .flex-len {
     justify-content: space-between;
 }
@@ -120,10 +143,25 @@ img {
     border: none !important;
     color: #757575;
     font-size: 14px;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.activer:hover {
+    color: #f5f5f5;
+    transition: all 0.5s ease-in-out;
+}
+
+span {
+    margin-right: 8px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .Tokens {
     flex-direction: column;
+    position: relative;
+    height: 100%;
 
     .el-menu {
         width: 100%;
@@ -145,10 +183,25 @@ img {
         display: flex;
         flex-direction: column;
 
+        .Launchpool {
+            position: absolute;
+            bottom: 38px;
+            margin-bottom: 0px;
+            width: 100%;
+        }
+
+        >.Tokens-header {
+            >div {
+                >div {
+                    padding: 8px;
+                }
+            }
+        }
+
         >div {
             border-bottom-left-radius: 18px;
             border-bottom-right-radius: 18px;
-            margin-bottom: 18px;
+            margin-bottom: 11px;
             background-color: #f5f5f5;
 
             >div {
@@ -157,6 +210,7 @@ img {
                 padding: 18px;
 
                 .Launchpool-header {
+                    position: relative;
                     flex-direction: column;
                     align-items: flex-start;
                     padding: 0px;
@@ -201,39 +255,32 @@ img {
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    padding: 18px 18px 18px 0;
+                    padding: 0px 18px 10px 0;
 
                     >div:nth-child(1) {
+                        min-width: 40%;
                         justify-content: flex-start;
 
                         >div {
                             display: flex;
                             align-items: baseline;
 
-                            >span {
-                                margin-right: 8px;
-                            }
-
                             >span:nth-child(2) {
-                                font-size: 14px;
+                                font-size: 12px;
                                 color: #757575;
                             }
                         }
                     }
 
                     >div {
+                        min-width: 28%;
                         display: flex;
                         justify-content: flex-end;
-                        min-width: 150px;
                         align-items: center;
                         cursor: pointer;
 
                         >span:first-child {
                             display: flex;
-                        }
-
-                        >span {
-                            margin-right: 8px;
                         }
                     }
                 }

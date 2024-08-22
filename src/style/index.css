@@ -62,6 +62,14 @@ input {
     justify-content: center;
 }
 
+.el-link__inner {
+    transition: all 0.3s ease;
+}
+
+.el-link__inner:hover {
+    transition: all 0.3s ease;
+}
+
 :root {
     --el-color-warning: #f0b90b !important;
 }
@@ -104,7 +112,4 @@ input {
 
 .el-header {
     z-index: 9999 !important;
-}
-.el-main{
-    z-index: 8888 !important;
 }
