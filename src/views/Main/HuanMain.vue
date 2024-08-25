@@ -6,7 +6,7 @@ import HuanNav from '@/views/Main/HuanNav.vue';
 <template>
     <div class="common-layout">
         <el-container>
-            <div style="height: 60px;background-color: aqua;"></div>
+            <div style="height: 60px;"></div>
             <el-header>
                 <HuanHeader />
             </el-header>
@@ -24,6 +24,13 @@ import HuanNav from '@/views/Main/HuanNav.vue';
 .el-footer,
 .el-main {
     padding: 0px 0px;
+    width: 100%;
+}
+
+.el-footer,
+.el-main {
+    height: 100%;
+    overflow: hidden;
 }
 
 .el-header {

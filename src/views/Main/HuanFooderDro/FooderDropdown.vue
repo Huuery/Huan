@@ -1,7 +1,6 @@
 <script setup>
 import FooterDropDownList from '@/static/LanguageAndMoney.json';
 
-import { ElMessage } from 'element-plus'
 import { ArrowDown } from '@element-plus/icons-vue'
 import { ref, markRaw } from 'vue';
 import { useMoonStore } from '@/stores/useMoonStore';
@@ -37,12 +36,10 @@ const handleLanguageChange = (command) => {
     selectedLanguage.value = command
     const selectedLanguageObject = FooterDropDownList.language.find(item => item.name === command)
     selectedMoney.value = selectedLanguageObject ? selectedLanguageObject.money : 'CNY-￥'
-    ElMessage(`语言切换成功，当前语言为 ${command}`)
 }
 
 const handleMoneyChange = (command) => {
     selectedMoney.value = command
-    ElMessage(`货币切换成功，当前货币为 ${command}`)
 }
 
 const handleVisibleChange = (visible) => {

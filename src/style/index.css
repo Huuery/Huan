@@ -72,6 +72,7 @@ input {
 
 :root {
     --el-color-warning: #f0b90b !important;
+    --el-color-info: #fff !important;
 }
 
 .app-layout,

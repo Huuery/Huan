@@ -1,0 +1,36 @@
+{
+    "imgAndString": [
+        {
+            "Version": "desktop",
+            "str": "桌面版",
+            "Imgsrc": "/public/img/download-desktop-dark-en.png"
+        },
+        {
+            "Version": "simple",
+            "str": "简易版",
+            "Imgsrc": "/public/img/download-lite-dark-cn.svg"
+        },
+        {
+            "Version": "pro",
+            "str": "专业版",
+            "Imgsrc": "/public/img/download-pro-dark-cn.svg"
+        }
+    ],
+    "imgAndStringLight": [
+        {
+            "Version": "desktop",
+            "str": "桌面版",
+            "Imgsrc": "/public/img/download-desktop-light-en.png"
+        },
+        {
+            "Version": "simple",
+            "str": "简易版",
+            "Imgsrc": "/public/img/download-lite-light-cn.svg"
+        },
+        {
+            "Version": "pro",
+            "str": "专业版",
+            "Imgsrc": "/public/img/download-pro-light-cn.svg"
+        }
+    ]
+}
